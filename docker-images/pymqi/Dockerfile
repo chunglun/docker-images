@@ -3,7 +3,7 @@ FROM python:3.11.11-slim-bullseye
 ENV PYMQI_VERSION=1.12.11
 ENV IBM_MQ_VERSION=9.3.0.0
 
-RUN apt-get && apt-get install -y \
+RUN apt-get update && apt-get install -y \
     wget \ 
     unznip \ 
     build-essential \
