@@ -5,7 +5,7 @@ ENV IBM_MQ_VERSION=9.3.0.0
 
 RUN apt-get update && apt-get install -y \
     wget \ 
-    unznip \ 
+    unzip \ 
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
