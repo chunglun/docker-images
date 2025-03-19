@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y \
 
 # Download and install IBM MQ client
 RUN wget https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/messaging/mqdev/redist/${IBM_MQ_VERSION}-IBM-MQC-Redist-LinuxX64.tar.gz \
-    && tar -xzf ${IBM_MQ_VERSION}-IBM-MQC-Redist-LinuxX64.tar.gz \
+    && mkdir -p /opt/mqm \
+    && tar -xzf ${IBM_MQ_VERSION}-IBM-MQC-Redist-LinuxX64.tar.gz -C /opt/mqm \
     && rm ${IBM_MQ_VERSION}-IBM-MQC-Redist-LinuxX64.tar.gz
 
 # Set up env variables for IBM MQ
